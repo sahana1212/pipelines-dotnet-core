@@ -29,9 +29,9 @@ steps:
     scannerMode: 'MSBuild'
     projectKey: 'sahana123'
 
-- task: SonarCloudAnalyze@1
-  inputs:
-    projectKey: 'sahana123'
+#- task: SonarCloudAnalyze@1
+#  inputs:
+#    projectKey: 'sahana123'
 
 - task: SonarCloudPublish@1
   inputs:
