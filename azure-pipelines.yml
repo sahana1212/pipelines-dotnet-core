@@ -41,4 +41,12 @@ steps:
   inputs:
     artifactoryService: 'artifactory'
     specSource: 'taskConfiguration'
+    fileSpec: '{
+        "files": [
+          {
+            "pattern": "*.*",
+            "target": "sahana123"
+          }
+        ]
+      }'
     failNoOp: true
