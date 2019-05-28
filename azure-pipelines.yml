@@ -15,3 +15,14 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'osr'
+    organization: 'sahana1212-github'
+    scannerMode: 'MSBuild'
+    projectKey: 'sahana123'
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
